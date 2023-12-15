@@ -37,10 +37,10 @@ function init() {
 }
 
   const myGhosts = [
-    new Ghost("ghostOne", 122, 1000),
-    new Ghost("ghostTwo", 123, 1000),
-    new Ghost("ghostThree", 85, 1000),
-    new Ghost("ghostFour", 124, 1000),
+    new Ghost("ghostOne", 122, 500),
+    new Ghost("ghostTwo", 123, 500),
+    new Ghost("ghostThree", 85, 500),
+    new Ghost("ghostFour", 124, 500),
   ];
 
   // ! Functions
@@ -113,7 +113,7 @@ function init() {
   ghostAllMovements.forEach((singleMove) => clearInterval(singleMove));
   setTimeout(function() {
     myGhosts.forEach((ghost) => {
-      const singleMove = setInterval(() => moveGhost(ghost), 1000);
+      const singleMove = setInterval(() => moveGhost(ghost), 500);
           ghostAllMovements.push(singleMove);
       })
     fruitAte = false
@@ -218,7 +218,7 @@ function init() {
     });
 
     function addToMovements(ghost) {
-      const singleMove = setInterval(() => moveGhost(ghost), 1000);
+      const singleMove = setInterval(() => moveGhost(ghost), 500);
       ghostAllMovements.push(singleMove);
     }
 
@@ -236,12 +236,6 @@ function init() {
   // ? REMOVE PAC
   function removePac() {
     cells[currentPosition].classList.remove("pac");
-  }
-  /// eating ghosts
-  function eatGhost(ghost) {
-    if (cells[currentPosition].classList.contains(ghost.className, "ghost")); {
-    cells[ghost.currentPosition].classList.remove(ghost.className, "ghost");
-    }
   }
 
   // ! HANDLE MOVEMENT
@@ -329,7 +323,7 @@ function init() {
           document.querySelector(".lostgame").innerHTML = `GAME OVER`;
           setTimeout(function () {
             location.reload();
-          }, 2000);
+          }, 1500);
 
           ghostAllMovements.forEach((singleMove) => clearInterval(singleMove));
           newHighScore();
