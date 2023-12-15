@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: #222222;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  column-gap: 5px;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 100px 100px;
+}
+h1 {
+  padding-top: 20px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.scoretext, .score, .highscoretext, .highscorenum {
+  padding-top: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+}
+
+.scoretext {
+  max-width: 20px;
+  text-decoration: solid;
+  color: rgb(146, 255, 155);
+}
+
+.score {
+  max-width: 20px;
+  text-decoration: bold;
+  font-size: 30px;
+}
+
+.highscoretext {
+  max-width: 20px;
+  text-decoration: solid;
+  color: rgb(146, 255, 155);
+}
+
+.highscorenum {
+  max-width: 20px;
+  text-decoration: bold;
+  font-size: 30px;
+}
+
+.lostgame {
+  text-align: center;
+  color: rgb(163, 226, 241);
+  font-size: 30px;
+  height: 30px;
+  margin: 0;
+}
+
+.grid-wrapper {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  align-items: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  height: 600px;
+  width: 600px;
+  background-color: rgb(43, 43, 43);
+  
+}
+
+.grid div {
+  border: 1px solid rgb(53, 53, 53);
+  flex-grow: 1;
+  height: 10%;
+  width: 10%;
+  gap: 2px;
+  border-radius: 15%;
+}
+.wall {
+    background-color: rgb(126, 161, 238);
+}
+
+.pac {
+  background-image: url('../pics/pacman1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.specialFruit {
+  background-image: url('../pics/stawb.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.fruit {
+  background-image: url('../pics/fruit.png');
+  background-repeat: no-repeat;
+  background-size: contain
+}
+.dots {
+  background-image: url('../pics/tinydott.png');
+  background-repeat: no-repeat;
+  background-size: 0.5vh;
+  background-position: center;
+  }
+.ghostOne {
+  background-image: url('../pics/Pac-Man-Pixel-No-Background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+
+.ghostTwo {
+  background-image: url('../pics/pinkone.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+
+.ghostThree {
+  background-image: url('../pics/Pac-Man-Pixel-PNG-Images-HD.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+
+.ghostFour {
+  background-image: url('../pics/ghost4.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  }
+
+.lives {
+  background-image: url('../pics/heart.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  align-self: flex-end;
+}
