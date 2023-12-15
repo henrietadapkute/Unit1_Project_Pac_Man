@@ -45,6 +45,15 @@ function init() {
 
   // ! Functions
 
+  function pacDies() {
+    let deathAud = new Audio ("https://cdn.freesound.org/previews/266/266163_4284968-lq.mp3")
+    deathAud.play()
+  }
+
+  function playEating() {
+    let eatDotAudio = new Audio ("https://cdn.freesound.org/previews/341/341695_5858296-lq.mp3")
+    eatDotAudio.play()
+  }
   // checking next available move for ghost
   function moveGhost(ghost) {
 
@@ -275,6 +284,7 @@ function init() {
     function dotseaten() {
     if (cells[currentPosition].classList.contains("dots")) {
     cells[currentPosition].classList.remove("dots");
+    playEating()
     updatecurrScore();
     }
   }
@@ -284,6 +294,7 @@ function init() {
     cells[currentPosition].classList.remove("fruit");
     score += 200;
     updatecurrScore();
+    playEating()
     stopGhosts();
     fruitAte = true
 
@@ -314,6 +325,7 @@ function init() {
         else if (myGhosts[i].currentPosition === currentPosition) {
           lives --
           removePac()
+          pacDies()
           currentPosition = startingPosition
           addPac(currentPosition);
 
