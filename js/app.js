@@ -309,7 +309,7 @@ function init() {
         location.reload();
       }, 2000);
       document.querySelector(".lostgame").innerHTML = `Level complete!`;
-    } else {
+    } 
       for (let i = 0; i < myGhosts.length; i++) {
         if (myGhosts[i].currentPosition === currentPosition && fruitAte) {
           cells[myGhosts[i].currentPosition].classList.remove(myGhosts[i].className, "ghost");
@@ -336,7 +336,6 @@ function init() {
           return;
         }
       }
-    }
 const livesContainer = document.querySelector(".lives-container");
   livesContainer.innerHTML = `${Array.from({ length: lives }, () => '<div class="lives"></div>')}`;
   }
