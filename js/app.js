@@ -47,11 +47,13 @@ function init() {
 
   function pacDies() {
     let deathAud = new Audio ("https://cdn.freesound.org/previews/266/266163_4284968-lq.mp3")
+    deathAud.volume = 0.5;
     deathAud.play()
   }
 
   function playEating() {
     let eatDotAudio = new Audio ("https://cdn.freesound.org/previews/341/341695_5858296-lq.mp3")
+    eatDotAudio.volume = 0.5;
     eatDotAudio.play()
   }
   // checking next available move for ghost
